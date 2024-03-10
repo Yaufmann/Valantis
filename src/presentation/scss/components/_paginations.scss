@@ -1,0 +1,52 @@
+@import "../variables";
+
+.page_wrapper {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .arrayLeft {
+    color: $purp;
+    font-size: 30px;
+    margin-right: 8px;
+    cursor: pointer;
+    border: none;
+    background: $white;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+
+  .arrayRight {
+    color: $purp;
+    font-size: 30px;
+    margin-left: 8px;
+    cursor: pointer;
+    border: none;
+    background: $white;
+  }
+
+  .page {
+    color: $white;
+    background: $purp;
+    padding: 10px;
+    border: 1px solid gray;
+    cursor: pointer;
+  }
+
+  .page:active {
+    opacity: 0.7;
+  }
+
+  .page__current {
+    border: 2px solid black;
+    font-weight: bold;
+  }
+}
+
+
+
+
