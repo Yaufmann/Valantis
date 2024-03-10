@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useAppDispatch, useAppSelector} from "../../hooks/hooks.ts";
 import {fetchPage} from "../../store/slice.ts";
 import Loader from "../loader/Loader.tsx";
