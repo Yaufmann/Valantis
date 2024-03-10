@@ -18,7 +18,7 @@ export class Api implements IApi {
     async fetch(body:Object){
         return await fetch(API_URL, {
             "headers": {
-                'content-type': 'application/octet-stream',
+                'content-type': 'application/json',
                 "X-Auth": this.XAuthHeader(),
             } as any,
             "body": JSON.stringify(body),
