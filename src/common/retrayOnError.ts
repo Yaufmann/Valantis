@@ -12,7 +12,7 @@ async function attempt(this: any, fn: () => any, args: any, maxAttempts: number)
 
 export default function reTrayOnError(count = 1) {
     return function (...[,,descriptor]:[any,any,PropertyDescriptor]) {
-        const originalFn = descriptor.value;// спросить что возвращает и про apply к чемуконкретно привязывается
+        const originalFn = descriptor.value;
         descriptor.value = async function(...args: any[]) {
             return await attempt.apply(this, [originalFn, args, count]);
         };
